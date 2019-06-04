@@ -2,22 +2,43 @@
 import React from "react"
 import Comment from "./Comment.js"
 import PropTypes from "prop-types";
+import CommentForm from "./CommentForm"
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.comments
+    }
+  }
 
-function CommentSection(props) {
-  return (
-    <div>
+  addNewComment = (text, index) => {
+    const newComment = {
+      id: index,
+      username: "placeholder",
+      text: text
+    }
+    console.log(newComment)
+    this.setState(prevState => {
+      return {
+        comments: [...prevState.comments, newComment]
+      } 
+    })
+  }
 
-      <Comment  
-        comments={props.comments}
-      />
-
-      <form>
-        Comment:  
-        <input type="text"  />
-      </form>
-      
-    </div>
-  )
+  render() {
+    console.log(this.state.comments)
+    return (
+      <div>
+        <Comment  
+          comments={this.state.comments}
+        />
+        <CommentForm  
+          comments={this.state.comments}
+          addNewComment={this.addNewComment}
+        />
+      </div>
+    )
+  }
 }
 
 CommentSection.propTypes = {

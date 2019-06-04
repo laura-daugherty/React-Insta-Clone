@@ -5,7 +5,7 @@ import Post from "../Post/Post.js"
 
 function PostContainer(props) {
   return (
-    <div>
+    <div className="postContainer">
       {props.datas.map(data => {
         return (
           <div key={data.id}>

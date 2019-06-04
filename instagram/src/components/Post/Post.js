@@ -3,6 +3,8 @@ import Image from "./Image.js"
 import Icons from "./Icons.js"
 import UsernamePic from "./UsernamePic.js"
 import Likes from "./Likes"
+
+
 function Post(props) {
   console.log("inside post")
   console.log(props)

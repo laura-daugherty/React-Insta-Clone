@@ -10,3 +10,9 @@
     height: 48px; }
   .usernamePic .username {
     width: fit-content; }
+
+.postContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 80%; }

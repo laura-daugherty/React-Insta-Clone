@@ -10,10 +10,20 @@ class App extends React.Component {
   constructor () {
     super ();
     this.state = {
-      datas: dummyData,
+      datas: [],
     }
+    console.log('construction')
   };
+
+  componentDidMount() {
+    this.setState ({
+      datas: dummyData,
+    })
+    console.log('didMount')
+  }
+  
   render() {
+    console.log('did render')
     return (
       <div className="App">
         <SearchBar  />
@@ -22,8 +32,7 @@ class App extends React.Component {
         />
       </div>
     );
-    }
-
+  }
 }
 
 export default App;
