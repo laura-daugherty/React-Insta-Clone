@@ -16,7 +16,7 @@ function PostContainer(props) {
     </div>
   )
 }
-
+//just check the ones I need
 PostContainer.propTypes = {
   datas: PropTypes.arrayOf(
     PropTypes.shape({
