@@ -4,23 +4,17 @@ import PropTypes from "prop-types";
 function Comment(props) {
   console.log(props)
   return (
-
-      <div>
-        {props.comments.map(comment => {
-          return (
-            <div className="singleComment">
-              <h2>
-              {comment.username}
-              </h2>
-              <p>
-              {comment.text}
-              </p>
-            </div>
-          )
-        })}
-      </div>
-
-
+    <div>
+      {props.comments.map(comment => {
+        return (
+          <div key={comment.id} className="singleComment">
+            <p>
+              {comment.username}: {comment.text}
+            </p>
+          </div>
+        )
+      })}
+    </div>
   )
 }
 

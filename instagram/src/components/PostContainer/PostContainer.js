@@ -1,17 +1,25 @@
 import React from "react";
 import CommentSection from '../CommentSection/CommentSection.js'
 import PropTypes from "prop-types";
+import Post from "../Post/Post.js"
 
 function PostContainer(props) {
   return (
     <div>
       {props.datas.map(data => {
         return (
-          <CommentSection
-            comments={data.comments}
-            key={data.id}
-          />
-        )
+          <div key={data.id}>
+            <Post 
+              image={data.imageUrl}
+              thumbNail={data.thumbNailUrl}
+              username={data.username}
+              likes={data.likes}
+            />
+            <CommentSection
+              comments={data.comments}
+            />
+          </div>
+         )
       })}
     </div>
   )

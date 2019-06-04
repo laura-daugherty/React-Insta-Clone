@@ -6,9 +6,16 @@ import PropTypes from "prop-types";
 function CommentSection(props) {
   return (
     <div>
+
       <Comment  
         comments={props.comments}
       />
+
+      <form>
+        Comment:  
+        <input type="text"  />
+      </form>
+      
     </div>
   )
 }

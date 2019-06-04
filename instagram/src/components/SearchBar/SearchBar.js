@@ -4,7 +4,7 @@ function SearchBar() {
   return (
     <div className="searchBar">
       <div className="cameraLogo">
-        <img className="camera"src="https://img.icons8.com/metro/26/000000/instagram-new.png" altText="Instagram Logo"  />
+        <img className="camera"src="https://img.icons8.com/metro/26/000000/instagram-new.png" alt="Instagram Logo"  />
         Instagram
       </div>
       <form className="searchInput">
