@@ -11,7 +11,7 @@ function PostContainer(props) {
           <div key={data.id}>
             <Post 
               image={data.imageUrl}
-              thumbNail={data.thumbNailUrl}
+              thumbNail={data.thumbnailUrl}
               username={data.username}
               likes={data.likes}
             />
