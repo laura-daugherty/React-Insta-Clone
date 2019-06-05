@@ -21,7 +21,6 @@ class CommentForm extends React.Component {
   onChangeComment = (event) => {
     this.setState({
       newComment: event.target.value,
-      newID: 4,
     })
   }
 
