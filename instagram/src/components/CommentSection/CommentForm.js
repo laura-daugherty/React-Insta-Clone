@@ -4,7 +4,8 @@ class CommentForm extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      newComment:""
+      newComment:"",
+      newID: ""
     }
   }
 
@@ -12,13 +13,15 @@ class CommentForm extends React.Component {
     event.preventDefault();
     console.log("onClickButton")
     console.log(this.state.newComment)
-    this.props.addNewComment(this.state.newComment, 1);
+    this.props.addNewComment(this.state.newComment, this.state.newID)
+    // this.props.newID(this.state.newID)
   }
 
 
   onChangeComment = (event) => {
     this.setState({
-      newComment: event.target.value
+      newComment: event.target.value,
+      newID: 4,
     })
   }
 

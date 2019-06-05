@@ -3,6 +3,8 @@ import React from "react"
 import Comment from "./Comment.js"
 import PropTypes from "prop-types";
 import CommentForm from "./CommentForm"
+
+
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -11,13 +13,14 @@ class CommentSection extends React.Component {
     }
   }
 
-  addNewComment = (text, index) => {
+  addNewComment = (text) => {
     const newComment = {
-      id: index,
+      id: Date.now(),
       username: "placeholder",
       text: text
     }
     console.log(newComment)
+
     this.setState(prevState => {
       return {
         comments: [...prevState.comments, newComment]

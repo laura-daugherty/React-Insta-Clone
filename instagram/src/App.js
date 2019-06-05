@@ -12,21 +12,38 @@ class App extends React.Component {
     this.state = {
       datas: [],
     }
-    console.log('construction')
+    // console.log('construction')
   };
 
   componentDidMount() {
     this.setState ({
       datas: dummyData,
     })
-    console.log('didMount')
+    // console.log('didMount')
   }
   
+  //function to filter datas with an argument
+  filterData = (searchInput) => {
+    // console.log("I love you mama boo bear")
+    // console.log(searchInput)
+    //props.datas.filter() data => this.prevState.searchInput === props.datas.username)
+    this.setState({
+      datas: dummyData.filter((data) => {
+        // console.log("inside setSTATE")
+        // console.log(data)
+        return data.username.includes(searchInput) 
+      })
+    })
+  }
+
   render() {
-    console.log('did render')
+    // console.log('did render')
     return (
       <div className="App">
-        <SearchBar  />
+        <SearchBar  
+          datas={this.state.datas}
+          filterData={this.filterData}
+        />
         <PostContainer 
           datas={this.state.datas}  
         />
