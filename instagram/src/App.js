@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import dummyData from './dummy-data.js'
 import PostsPage from './components/PostContainer/PostsPage'
 import withAuthenticate from './components/authentication/withAuthenticate'
+import LoginPage from "./components/Login/LoginPage.js"
 
-const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(LoginPage)
 
 class App extends React.Component {
 
@@ -18,4 +19,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App

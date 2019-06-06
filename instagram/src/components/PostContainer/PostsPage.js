@@ -3,7 +3,7 @@ import PostContainer from '/Users/lauradaugherty/Lambda Projects/React-Insta-Clo
 import SearchBar from '/Users/lauradaugherty/Lambda Projects/React-Insta-Clone/instagram/src/components/SearchBar/SearchBar.js'
 import dummyData from '/Users/lauradaugherty/Lambda Projects/React-Insta-Clone/instagram/src/dummy-data.js'
 
-class PostPage extends React.Component {
+class PostsPage extends React.Component {
   constructor () {
     super ();
     this.state = {
@@ -21,7 +21,6 @@ class PostPage extends React.Component {
   
   //function to filter datas with an argument
   filterData = (searchInput) => {
-    console.log("I love you mama boo bear")
     console.log(searchInput)
     //props.datas.filter() data => this.prevState.searchInput === props.datas.username)
     this.setState({
@@ -51,4 +50,4 @@ class PostPage extends React.Component {
   }
 }
 
-export default PostPage
+export default PostsPage
