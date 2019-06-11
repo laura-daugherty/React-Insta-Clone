@@ -1,0 +1,11 @@
+.usernamePic {
+  display: flex;
+  .thumbNail {
+    border-radius: 100px;
+    height: 48px;
+  }
+  .username {
+    width: fit-content;
+  }
+}
+
